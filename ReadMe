@@ -1,0 +1,12 @@
+#there is two set of volunteer, one will do the test, one will do the training
+#feature.txt include the code and all the features/measurement categories
+#y train and y_test match the activity label with the recording data in x txt
+#activty label: the code and the corresponding activty names
+#subject test identify the subject by using code
+
+=>>> first we load the data, and find the common column. Work with both train 
+and test folder THEN combine the two dataset
+Move on to the feature. txt -> read it and extract only the measurement with std
+and mean it its name
+Label the dataset
+Finally create a tidy data with the average of each variable for each activity and each subject
