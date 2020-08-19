@@ -7,6 +7,14 @@
 =>>> first we load the data, and find the common column. Work with both train 
 and test folder THEN combine the two dataset
 Move on to the feature. txt -> read it and extract only the measurement with std
-and mean it its name
-Label the dataset
-Finally create a tidy data with the average of each variable for each activity and each subject
+and mean it its name. Jsing grep() to create index locating the feature that has
+mean or std on its name
+
+Use descriptive names to names the activity in the dataset
+match the activity label in y dataset with the activity label.txt. Used match()
+and assigned the new values to activity label column in the big dataset
+
+Label data set with descriptive names USING features txt that only has mean
+#and STD value , assign the name to data_all2. Add +2 to the feeature index since we just added the activty and subject column in the big X dataset
+
+Finally create a tidy data with the average of each variable for each activity and each subject. Used aggregate()
