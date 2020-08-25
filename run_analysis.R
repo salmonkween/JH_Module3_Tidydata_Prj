@@ -34,8 +34,13 @@ data_all<-rbind(data_train, data_test)
 features<-read.table("./UCI HAR Dataset/features.txt", col.names = c("code", "measurements"))
 #grab only the measurement with mean and SD
 features_select<-grep("mean|std", features$measurement)
-# this give indexes of values that satisfy the condition. Plus 2 since data all
-#has 563 while features has only 561 due to the subject and label column
+# this give indexes of values that satisfy the condition.
+
+#Plus 2 since data all has 563 while features has only 561 due to the subject 
+#and label column
+#data2 is all column 1 2 of data_all but only select the column that match the feature
+#index indicated above +2 (lui lai 2 column)
+
 data_all2<-data_all[, c(1, 2, features_select + 2)]
 
 #STEP 3: use descriptive names to names the activity in the dataset
